@@ -1,3 +1,4 @@
+"++++++++ BaseSets ++++++++++++
 syntax on
 set number
 set cursorline
@@ -14,22 +15,22 @@ set mouse=""
 set shortmess=atI
 set helplang=cn
 
+"+++++++++ VimFiles +++++++++++
 set undofile
 set backup
-"set noundofile
 set undodir=$VIM/.vim/undo
-"set nobackup
 set backupdir=$VIM/.vim/backup
-"set noswapfile
 set directory=$VIM/.vim/swap
+set viminfo+=<200,'200,/100,:500,h,s20,n$VIM/.vim/_viminfo
 
-
+"++++++++ Codings +++++++++++++
 set langmenu=zh_CN.UTF-8
 set helplang=cn
 set termencoding=utf-8
 set encoding=utf-8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
+"++++++++ Indent ++++++++++++++
 set backspace=indent,eol,start
 set cindent
 "set autoindent
@@ -40,7 +41,7 @@ set tabstop=3
 set shiftwidth=3
 set foldmethod=indent
 
-"++++++++++ Color +++++++++++++
+"++++++++++ Chemes +++++++++++++
 set list
 set listchars=eol:\ ,tab:\ \|\ ,space:\ 
 "hi SpecialKey guifg=darkgrey ctermfg=darkgrey
@@ -50,7 +51,7 @@ set t_Co=256
 hi Normal ctermbg=233 guibg=NONE ctermfg=252
 colorscheme slate
 
-"++++++++++快捷键设置++++++++++
+"++++++++++ Keys ++++++++++++
 let mapleader=";"
 set timeoutlen=300
 imap <leader>s <ESC>:w<CR>

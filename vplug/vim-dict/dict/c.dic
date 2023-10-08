@@ -817,7 +817,7 @@ stable_sort
 stack
 std
 stderr
-stdin
+stdio
 stdout
 strcat
 strchr
