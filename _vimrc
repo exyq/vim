@@ -94,7 +94,8 @@ Plug '$VIM/vplug/undotree'
 nmap <A-S-U> :UndotreeToggle<CR>
 Plug '$VIM/vplug/AutoComplPop'
 Plug '$VIM/vplug/vim-dict'
-Plug '$VIM/vplug/vimcdoc/'
+Plug '$VIM/vplug/vimcdoc'
+Plug '$VIM/vplug/bx_vimim_dict'
 call plug#end()
 
 "+++++++++ Dictionary +++++++++
