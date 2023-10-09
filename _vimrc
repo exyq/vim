@@ -15,6 +15,9 @@ set mouse=""
 set shortmess=atI
 set helplang=cn
 
+"+++++++++ GVimConfig +++++++++
+set guifont=幼圆:h11.5:cGB2312
+
 "+++++++++ VimFiles +++++++++++
 set undofile
 set backup
@@ -33,23 +36,23 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 "++++++++ Indent ++++++++++++++
 set backspace=indent,eol,start
 set cindent
-"set autoindent
-"set smartindent
 set cinoptions=g0,:0,N-s,(0
-"filetype indent on
 set tabstop=3
 set shiftwidth=3
 set foldmethod=indent
+"set autoindent
+"set smartindent
+"filetype indent on
 
 "++++++++++ Chemes +++++++++++++
 set list
 set listchars=eol:\ ,tab:\ \|\ ,space:\ 
-"hi SpecialKey guifg=darkgrey ctermfg=darkgrey
-"hi NonText guifg=darkgrey ctermfg=darkgray
 hi CursorLine ctermbg=NONE ctermfg=NONE 
 set t_Co=256
 hi Normal ctermbg=233 guibg=NONE ctermfg=252
 colorscheme slate
+"hi SpecialKey guifg=darkgrey ctermfg=darkgrey
+"hi NonText guifg=darkgrey ctermfg=darkgray
 
 "++++++++++ Keys ++++++++++++
 let mapleader=";"
