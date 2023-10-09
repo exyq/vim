@@ -16,7 +16,12 @@ set shortmess=atI
 set helplang=cn
 
 "+++++++++ GVimConfig +++++++++
-set guifont=幼圆:h11.5:cGB2312
+set guifont=Consolas:i:h12
+set guifontwide=幼圆:b:h12:cGB2312
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=R
 
 "+++++++++ VimFiles +++++++++++
 set undofile
