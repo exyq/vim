@@ -557,7 +557,7 @@ function! emmet#expandAbbr(mode, abbr) range abort
         let save_regtype = getregtype('"')
         silent! normal! gvygv
         let str = @"
-        call setreg('"', save_regcont, save_regtype)
+        call setreg('"', save_regcont)
         if stridx(leader, '{$#}') ==# -1
           let leader .= '{$#}'
         endif

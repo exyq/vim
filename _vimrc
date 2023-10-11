@@ -61,34 +61,61 @@ colorscheme slate
 
 "++++++++++ Keys ++++++++++++
 let mapleader=";"
-set timeoutlen=300
+"set timeoutlen=400
+imap <leader>'<leader> <ESC>
+cmap <leader>'<leader> <ESC>
+vmap <leader>'<leader> <ESC>
+"++++++++++++++++++++++++++++++
 imap <leader>s <ESC>:w<CR>
 nmap <leader>s :w<CR>
-imap <leader><leader> <ESC>
-cmap <leader><leader> <ESC>
-nmap <leader><leader> <ESC>
-vmap <leader><leader> <ESC>
 "++++++++++++++++++++++++++++++
 imap <leader>h <LEFT>
 imap <leader>j <DOWN>
 imap <leader>k <UP>
 imap <leader>l <RIGHT>
 "++++++++++++++++++++++++++++++
-imap <leader>A <ESC>A
+imap <leader>a <ESC>A
 imap <leader>i <ESC>I
 imap <leader>u <ESC>ua
 imap <leader>p <ESC>lpi
-imap <leader>v <ESC>v
-imap <leader>V <ESC>V
-imap <leader>> <ESC>>>A
-imap <leader>< <ESC><<
+imap <leader>v <ESC><RIGHT>v
+imap <leader>vv <ESC>V
 imap <leader>x <Del>
+imap <leader>o <ESC>o
+imap <leader>O <ESC>O
+imap <leader>" <ESC>"
+imap <leader>r <ESC>:reg<CR>
 "++++++++++++++++++++++++++++++
 imap <leader>' <++>
 nmap <leader>' i<++><ESC>F<
 imap <leader>f <ESC>/<++><CR>ca<
 nmap <leader>f /<++><CR>ca<
+imap <leader>= <ESC>gg<S-V>G=
+nmap <leader>= gg<S-V>G=
+"++++++++++++++++++++++++++++++
+nmap <leader><leader>s :set
+imap <leader><leader>s <ESC>:set
+nmap <leader><leader>d :set<SPACE>dictionary+=$DICT/.dic<LEFT><LEFT><LEFT><LEFT>
+imap <leader><leader>d <ESC>:set<SPACE>dictionary+=$DICT/.dic<LEFT><LEFT><LEFT><LEFT>
+nmap <leader><leader>dd :set<SPACE>dictionary-=$DICT/.dic<LEFT><LEFT><LEFT><LEFT>
+imap <leader><leader>dd <ESC>:set<SPACE>dictionary-=$DICT/.dic<LEFT><LEFT><LEFT><LEFT>
+nmap <leader><leader>f :set<SPACE>fenc=
+imap <leader><leader>f <ESC>:set<SPACE>fenc=
+nmap <leader><leader>u :set<SPACE>fenc=utf-8<CR>
+imap <leader><leader>u <ESC>:set<SPACE>fenc=utf-8<CR>
+nmap <leader><leader>c :set<SPACE>fenc=cp936<CR>
+imap <leader><leader>c <ESC>:set<SPACE>fenc=cp936<CR>
+nmap <leader><leader>n :set<SPACE>nohlsearch<CR>
+imap <leader><leader>n <ESC>:set<SPACE>nohlsearch<CR>
+nmap <leader><leader>vv :source<SPACE>$VIM/_vimrc<CR>
+imap <leader><leader>vv <ESC>:source<SPACE>$VIM/_vimrc<CR>
 
+"+++++++++ Path +++++++++++++++
+let $DICT="$VIM/vplug/vim-dict/dict"
+let $VRC="$VIM/_vimrc"
+let $VU="$VIM/.."
+let $VUU="$VIM/../.."
+let $C="$HOME/Desktop"
 
 "+++++++++ Vim-Plug +++++++++++
 silent! call plug#begin('$VIM/vplug')
@@ -107,5 +134,6 @@ Plug '$VIM/vplug/vimcdoc'
 call plug#end()
 
 "+++++++++ Dictionary +++++++++
-autocmd FileType sql set dictionary=$VIM/vdict/sql.dict
+autocmd FileType sql set dictionary=$DICT/sql.dic
+
 
